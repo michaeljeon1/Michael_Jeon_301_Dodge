@@ -37,7 +37,7 @@ namespace Michael_Jeon_301_Dodge
         }
          public void MovePlanet()
         {
-            y += 10;
+    
 
             planetRec.Location = new Point(x, y);
         }
