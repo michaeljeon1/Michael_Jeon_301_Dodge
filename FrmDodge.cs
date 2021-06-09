@@ -16,6 +16,8 @@ namespace Michael_Jeon_301_Dodge
                     // declare space for an array of 7 objects called planet 
         planet[] planet = new planet[7];
         Random yspeed = new Random();
+        Spaceship spaceship = new Spaceship();
+
 
 
         public FrmDodge()
@@ -52,9 +54,11 @@ namespace Michael_Jeon_301_Dodge
 
             }
 
-           
+            spaceship.DrawSpaceship(g);
+
 
         }
+
 
         private void TmrPlanet_Tick(object sender, EventArgs e)
         {
