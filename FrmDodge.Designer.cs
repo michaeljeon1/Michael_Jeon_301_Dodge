@@ -30,12 +30,41 @@ namespace Michael_Jeon_301_Dodge
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            this.PnlGame = new System.Windows.Forms.Panel();
+            this.TmrPlanet = new System.Windows.Forms.Timer(this.components);
+            this.SuspendLayout();
+            // 
+            // PnlGame
+            // 
+            this.PnlGame.BackColor = System.Drawing.Color.Silver;
+            this.PnlGame.Location = new System.Drawing.Point(24, 30);
+            this.PnlGame.Name = "PnlGame";
+            this.PnlGame.Size = new System.Drawing.Size(500, 400);
+            this.PnlGame.TabIndex = 0;
+            this.PnlGame.Paint += new System.Windows.Forms.PaintEventHandler(this.PnlGame_Paint);
+            // 
+            // TmrPlanet
+            // 
+            this.TmrPlanet.Enabled = true;
+            this.TmrPlanet.Tick += new System.EventHandler(this.TmrPlanet_Tick);
+            // 
+            // FrmDodge
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.PnlGame);
+            this.Name = "FrmDodge";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.FrmDodge_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Panel PnlGame;
+        private System.Windows.Forms.Timer TmrPlanet;
     }
 }
 
